@@ -11,7 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-//    var captureSession : AVCaptureSession?
+
+    // backCamera and frontCamera are the abstraction of physical cameras
     var backCamera : AVCaptureDevice?
     var frontCamera : AVCaptureDevice?
     
@@ -33,15 +34,15 @@ class ViewController: UIViewController {
         if (backCamera != nil) {
             do { try captureInput = AVCaptureDeviceInput.init(device: backCamera)
                 
-            } catch  {
-                print("capturinput = backcamera")
+            } catch let error as NSError {
+                print(error)
             }
             
         }else if (frontCamera != nil) {
             do { try captureInput = AVCaptureDeviceInput.init(device: frontCamera)
                 
-            } catch  {
-                print("capturinput = frontcamera")
+            } catch let error as NSError {
+                print(error)
             }
         }
         let captureSession = AVCaptureSession()
