@@ -8,3 +8,5 @@ First try with AVFoundation Framework.
  When the basic UI and functions (take and save photos) are done, I'll try to add manual controls too.
  It would be nice to add also raw capture (for ios 10).
  
+
+API Reference: https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/04_MediaCapture.html#//apple_ref/doc/uid/TP40010188-CH5-SW2
